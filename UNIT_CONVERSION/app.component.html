@@ -1,0 +1,33 @@
+<h1>UNIT CONVERSION</h1>
+<br>
+<br>
+
+<input type="text"  placeholder="Enter value" [(ngModel)]="valueentered" />
+<br>
+<br>
+<br>
+CONVERT CURRENCY FROM
+<br>
+<br>
+<select name="cur" class="select-css" (change)="from($event)">
+    <option value="CM">CENTIMETER</option>
+    <option value="FEET">FEET</option>
+    <option value="M">METERS</option>
+</select>
+<br>
+<br>
+TO 
+<br>
+<br>
+<select name="cur" class="select-css" (change)="to($event)">
+    <option value="CM">CENTIMETER</option>
+    <option value="FEET">FEET</option>
+    <option value="M">METERS</option>
+</select>
+<br>
+<br>
+<button  class="button-style" (click)="cal()"> convert </button> 
+<br>
+<br>
+CONVERTED VALUE =
+<h2>{{cal1}}</h2>
