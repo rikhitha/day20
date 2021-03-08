@@ -1,0 +1,36 @@
+<header>
+    <img src='https://www.101computing.net/wp/wp-content/uploads/currencies.png' alt='image' width='50' height='60'> 
+</header>
+<h1>FOREX CALCULATION</h1>
+<br>
+<br>
+
+<input type="text"  placeholder="Enter amount" [(ngModel)]="amountentered" />
+<br>
+<br>
+<br>
+CONVERT CURRENCY FROM
+<br>
+<br>
+<select name="cur" (change)="from($event)">
+    <option value="INR">INR</option>
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+</select>
+<br>
+<br>
+TO 
+<br>
+<br>
+<select name="cur" (change)="to($event)">
+    <option value="INR">INR</option>
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+</select>
+<br>
+<br>
+<button (click)="cal()"> convert </button> 
+<br>
+CONVERTED VALUE =
+<h2>{{cal1}}</h2>
+
