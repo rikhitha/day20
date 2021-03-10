@@ -1,0 +1,10 @@
+<div style="text-align:left">
+  <h2>
+      Bank customer details from local json file...
+  </h2>
+  <ul *ngFor="let item of countryList">
+     <li>
+        <h3>ID :{{item.id}} -- CUSTOMER-ID: {{item.cid}} -- AMOUNT: {{item.amount}} -- CURRENCY: {{item.currency}} -- FROM ACCOUNT: {{item.from}} -- TO ACCOUNT: {{item.to}} -- BANK CHARGE: {{item.bankcharge}}</h3>
+     </li>
+  </ul>
+</div>
