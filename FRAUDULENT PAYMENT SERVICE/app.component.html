@@ -1,0 +1,24 @@
+<button (click)="valid()"> GET BANNED CURRENCIES </button> 
+<h2>{{check}}</h2>
+<button (click)="amount()"> GET AMOUNT LIMIT </button> 
+<h2>{{value}}</h2>
+<button (click)="accounts()"> GET BLOCKED ACCOUNTS </button> 
+<h2>{{account}}</h2>
+<h1>MAKE PAYMENT</h1>
+ACCOUNT HOLDER NAME: <input type="text" placeholder="enter name">
+<br>
+<br>
+ACCOUNT NUMBER:    <input type="text" placeholder="enter account number"[(ngModel)]="accnt">
+<div *ngFor ="let c of account">
+  <div *ngIf ='c==accnt'>
+    <h3>account is blocked</h3>
+  </div>
+</div>
+<br>
+<br>
+AMOUNT:    <input type="text" placeholder="enter amount"[(ngModel)]="val" >
+<div *ngIf='val>value'>
+  <h3>AMOUNT LIMIT IS {{value}}</h3>
+</div>
+
+
