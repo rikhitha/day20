@@ -1,0 +1,179 @@
+<header>
+  <img src='https://www.101computing.net/wp/wp-content/uploads/currencies.png' alt='image' width='50' height='60'> 
+</header>
+<h1>FOREX CALCULATION</h1>
+<br>
+<br>
+
+<input type="text"  placeholder="Enter amount" [(ngModel)]="amountentered" />
+<br>
+<br>
+<br>
+CONVERT CURRENCY FROM
+<br>
+<br>
+<select name="cur" (change)="from($event)">
+  <option value="INR">INR</option>
+  <option value="EUR">EUR</option>
+  <option value="USD">USD</option>
+</select>
+<br>
+<br>
+TO 
+<br>
+<br>
+<select name="cur" (change)="to($event)">
+  <option value="INR">INR</option>
+  <option value="EUR">EUR</option>
+  <option value="USD">USD</option>
+</select>
+<br>
+<br>
+<button (click)="cal()"> convert </button> 
+<br>
+CONVERTED VALUE =
+<h2>{{cal1}}</h2>
+
+<br>
+<br>
+<h1>UNIT CONVERSION</h1>
+<br>
+<br>
+
+<input type="text"  placeholder="Enter value" [(ngModel)]="uvalueentered" />
+<br>
+<br>
+<br>
+<select name="cur" class="select-css" (change)="ufrom($event)">
+    <option value="CM">CENTIMETER</option>
+    <option value="FEET">FEET</option>
+    <option value="M">METERS</option>
+</select>
+<br>
+<br>
+TO 
+<br>
+<br>
+<select name="cur" class="select-css" (change)="uto($event)">
+    <option value="CM">CENTIMETER</option>
+    <option value="FEET">FEET</option>
+    <option value="M">METERS</option>
+</select>
+<br>
+<br>
+<button  class="button-style" (click)="ucal()"> convert </button> 
+<br>
+<br>
+CONVERTED VALUE =
+<h2>{{ucal1}}</h2>
+
+<br>
+<br>
+<h3>BACKEND API OVER PROMISE</h3>
+
+<button (click)="getjsondata()">Fetch data</button>
+<div style="text-align:left">
+  <h4>
+      DETAILS FROM BACKEND
+  </h4>
+  <table border="8">
+      <tr>
+         <td>COUNTRY-ID</td>
+         <td>CUSTOMER-TYPE</td>
+         <td>CREDITCARD-TYPE</td>
+         <td>CURRENCY</td>
+         <td>COUNTRY</td>
+         <td>CITY</td>
+      </tr>
+      <tr *ngFor="let item of con">
+         <td>{{item.cid}}</td>
+         <td>{{item.customertype}}</td>
+         <td>{{item.creditcardtype}}</td>
+         <td>{{item.currency}}</td>
+         <td>{{item.country}}</td>
+         <td>{{item.city}}</td>
+
+        
+      </tr>
+     </table>
+     <h6>ENTER COUNTRY ID</h6>
+     <input type="text" placeholder="country-id" [(ngModel)]="countryid" >
+     <br>
+     <br>
+    
+     <table border=5>
+      <tr>
+         <td>COUNTRY-ID</td>
+         <td>CUSTOMER-TYPE</td>
+         <td>CREDITCARD-TYPE</td>
+         <td>CURRENCY</td>
+         <td>COUNTRY</td>
+         <td>CITY</td>
+      </tr>
+     <tr *ngFor="let id of con">
+        
+        
+           <td *ngIf="id.cid==countryid">{{id.cid}}</td>
+           <td *ngIf="id.cid==countryid">{{id.customertype}}</td>
+           <td *ngIf="id.cid==countryid">{{id.creditcardtype}}</td>
+           <td *ngIf="id.cid==countryid">{{id.currency}}</td>
+           <td *ngIf="id.cid==countryid">{{id.country}}</td>
+           <td *ngIf="id.cid==countryid">{{id.city}}</td>
+
+        </tr>
+      
+        </table>
+    
+  
+        
+  
+  
+</div>
+
+
+<h2>JSON PAYLOAD</h2>
+<button (click)="cgetjsondata()">Fetch data</button>
+<div style="text-align:left">
+  <h2>
+      Bank customer details from local json file...
+  </h2>
+  <table border="4">
+      <tr>
+         <td>ID</td>
+         <td>CUSTOMER-ID</td>
+         <td>AMOUNT</td>
+         <td>CURRENCY</td>
+         <td>FROM ACCOUNT</td>
+         <td>TO ACCOUNT</td>
+         <td>BANK CHARGE</td>
+      </tr>
+      <tr *ngFor="let item of cuscon">
+         <td>{{item.cusid}}</td>
+         <td>{{item.cuscuscid}}</td>
+         <td>{{item.cusamount}}</td>
+         <td>{{item.cuscurrency}}</td>
+         <td>{{item.cusfrom}}</td>
+         <td>{{item.custo}}</td>
+         <td>{{item.cusbankcharge}}</td>
+         </tr>
+     </table>
+     <br>
+     <br>
+  
+        
+  <input type="text" placeholder="enter currency" [(ngModel)]="cuscur" />
+  <br>
+  <p>Matched details</p>
+  <div *ngFor="let i of cuscon">
+   <div *ngIf="i.cuscuscid==cuscur">
+         <h3>ID:{{i.cusid}}</h3>
+         <h3>{{i.cuscuscid}}</h3> 
+         <h3>{{i.cusamount}}</h3>
+         <h3>{{i.cuscurrency}}</h3>   
+      
+
+      </div>
+
+   </div>
+  
+</div>
