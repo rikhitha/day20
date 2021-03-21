@@ -1,0 +1,28 @@
+<p>DATA FETCHED FROM BACKEND USING OBSERVABLE</p>
+<br>
+<br>
+ENTER BANNED CURRNCY:<input type="text" placeholder="enter currency" #val />
+<br>
+<br>
+<button (click)="getdetails(val.value)">getdetails</button>
+<br>
+<br>
+<table border=6>
+    <tr>
+        <td>CUSTOMER-ID</td>
+        <td>CUSTOMER-TYPE</td>
+        <td>CREDIT CARD-TYPE</td>
+        <td>CURRENCY</td>
+        <td>COUNTRY</td>
+        <td>CITY</td>
+        </tr>
+    <tr *ngFor="let it of datalist">
+        <td>{{it.cid}}</td>
+        <td>{{it.customertype}}</td>
+        <td>{{it.creditcardtype}}</td>
+        <td>{{it.currency}}</td>
+        <td>{{it.country}}</td>
+        <td>{{it.city}}</td>
+        </tr>
+    </table>
+
