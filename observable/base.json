@@ -1,0 +1,48 @@
+{
+  "customerdet": [
+    {
+      "customername":"Nancy",
+      "customerid":"a101",
+      "email":"nancy@gmail.com",
+      "age":23,
+      "country":"India",
+      "city":"chennai",
+      "phone":7871865372,
+      "product":"serum"
+
+    },
+    {
+      "customername":"vikram",
+      "customerid":"c101",
+      "email":"vikram23@gmail.com",
+      "age":25,
+      "country":"Japan",
+      "city":"Osaka",
+      "phone":7871865372,
+      "product":"serum"
+
+    },
+    {
+      "customername":"sam",
+      "customerid":"f101",
+      "email":"samf2@gmail.com",
+      "age":20,
+      "country":"India",
+      "city":"Banglore",
+      "phone":7871865372,
+      "product":"serum"
+
+    },
+    {
+      "customername":"yuly",
+      "customerid":"y101",
+      "email":"yu101@gmail.com",
+      "age":27,
+      "country":"China",
+      "city":"Tianjin",
+      "phone":7871865372,
+      "product":"serum"
+
+    }
+  ]
+}
